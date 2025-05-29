@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kanisha Sharma</title>
+
+  <!-- ✅ Calligraphy Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- ✅ Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Library CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* 🌗 Dark Mode Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    body.dark-mode a,
+    body.dark-mode .nav-link {
+      color: #ffffff !important;
+    }
+
+    #theme-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    #hero-calligraphy {
+      text-align: center;
+      margin-top: 20px;
+      padding: 100px 20px 30px 20px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 9rem;
+      color: #000;
+      z-index: 1;
+      background: url('Kanisha.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+    }
+    #hero-section {
+      padding-top: 2rem;
+    }
+
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for readability */
+    }
+
+    .about, .calligraphy {
+      width: 48%;
+    }
+
+    body.dark-mode #hero-calligraphy::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/6NKPrhO.png');
+      background-size: cover;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body.dark-mode .list-group-item {
+      background-color: transparent !important;
+      color: #ffffff !important;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    body.dark-mode pre code {
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      overflow-x: auto;
+    }
+
+    body.dark-mode .sticky-top {
+      background-color: #121212 !important;
+      box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode .nav-link {
+      color: #ffffff !important;
+    }
+
+    .project-scroll-container {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .project-scroll-track {
+      display: inline-flex;
+      width: max-content;
+      animation: scroll-left 40s linear infinite;
+    }
+
+    .project-card {
+      flex: 0 0 auto;
+      width: 300px;
+      margin-right: 20px;
+      background-color: #f8f9fa;
+      color: #000;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow card height to adjust based on content */
+      overflow: hidden;
+      white-space: normal; /* Ensure text wraps */
+      word-wrap: break-word; /* Prevent long words from overflowing */
+    }
+    
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .project-scroll-container:hover .project-scroll-track {
+      animation-play-state: paused;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    body.dark-mode .project-card {
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+
+    body.dark-mode .project-img {
+      filter: brightness(0.9);
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+
+    .project-scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .project-scroll-container::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    .project-scroll-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    /* Prevent navbar from overlapping anchor targets */
+html {
+  scroll-padding-top: 100px; /* Adjust this to match your navbar height */
+}    
+.btn-info {
+  background-color: #0077a3;
+  border-color: #0077a3;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+.contact-section {
+  background-image: url('https://www.anandgroupindia.com/wp-content/uploads/2019/05/contactus.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* optional dark overlay for contrast */
+  z-index: -1;
+}
+
+.contact-section .container {
+  position: relative;
+  z-index: 2;
+}
+.custom-resume-btn {
+  background-color: #0d6efd; /* Bootstrap primary */
+  color: white;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.custom-resume-btn:hover {
+  background-color: #084298; /* Darker blue */
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+  background-color: rgba(0, 0, 0, 0.6); /* dark semi-transparent overlay */
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.about h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+body.dark-mode .fixed-top {
+  background-color: #121212 !important;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+main {
+  padding-top: 3rem;
+}
+
+  </style>
+</head>
+<body class="dark-mode">
+
+<!-- ✅ Sticky Navigation Header with Dark Mode Button -->
+ <main>
+
+ </main>
+<div class="container-fluid bg-white fixed-top shadow-sm">
+  <header class="container d-flex flex-wrap align-items-center justify-content-between py-3 border-bottom">
+    <div class="d-flex align-items-center gap-3">
+      <strong>Kanisha Sharma</strong>
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+    </div>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#about" class="nav-link px-2 link-secondary">Home</a></li>
+      <li><a href="#about" class="nav-link px-2">About Me</a></li>
+      <li><a href="#skills" class="nav-link px-2">Skills</a></li>
+      <li><a href="#projects" class="nav-link px-2">Projects</a></li>
+      <li><a href="#achievements" class="nav-link px-2">Achievements</a></li>
+      <li><a href="#certificates" class="nav-link px-2">Certificates</a></li>
+      <li><a href="#contact" class="nav-link px-2">Contact</a></li>
+    </ul>
+    <div>
+      <button class="btn btn-dark" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </header>
+</div>
+
+<main>
+  <section id="hero-section">
+    <div class="container hero-content">
+      <!-- About on Left -->
+      <div id="about"class="about text-left">
+        <h2 style="font-size : 1.5rem">About Me</h2>
+        <p class="lead" style="font-size : 1rem">
+          Hello! I'm Kanisha Sharma, a passionate developer and lifelong learner with a strong interest in Artificial Intelligence and Machine Learning. I enjoy exploring new technologies, solving real-world problems through code, and continuously improving my skills.
+        </p>
+        <section id="resume" class="container text-center">
+          <a href="Kanisha_Sharma_VITBhopal.pdf" download class="btn btn-lg custom-resume-btn">
+            📄 Resume
+          </a>
+        </section>
+      </div>
+      
+      <!-- Calligraphy on Right -->
+      <div class="calligraphy text-right" id="hero-calligraphy" data-aos="fade-up">
+      </div>
+    </div>
+  </section>
+
+
+<!-- 🚀 Skills Section -->
+<section id="skills" class="container py-5"  style="margin-bottom: 50px;">
+  <h2 class="text-center mb-4" >Skills</h2>
+  <div style="margin-bottom: 50px;" data-aos="fade-up">
+    <div class="row">
+    <div class="col-md-6">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent">
+          <p>Proficient in Python, C++, and Java; experienced in web development using HTML, CSS, and JavaScript; working knowledge of R</p>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <p>Hands-on experience with NumPy, Pandas, Matplotlib, Seaborn, and Scikit-Learn for data analysis and machine learning</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent">
+          <p>Proficient in developing deep learning models using TensorFlow and Keras</p>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <p>Skilled in working with relational databases including MySQL and Oracle SQL</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  
+
+  <h4 class="text-center mb-4"  >Domains/ Expertise</h4>
+  <div class="row" data-aos="fade-up">
+    <div class="col-md-6">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent">
+          <strong>Machine Learning</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent">
+          <strong>Web Development</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 🚀 Projects Section -->
+<section id="projects" class="container-fluid py-5" style="margin-bottom: 50px;">
+  <h2 class="text-center mb-4">Projects</h2>
+
+  <div class="project-scroll-container">
+    <div class="project-scroll-track">
+      <!-- Original cards -->
+      <div class="project-card">
+        <a href="https://github.com/Plantpredictioncode/Plantprediction-mlmodel">
+          <img src="https://user-images.githubusercontent.com/69152112/223475593-f9f036c5-06fb-4ba2-95b1-950c8e289b7b.png" alt="CropPrediction" class="project-img">
+        </a>
+        <h5>Crop Prediction Model</h5>
+        <p>Developed an AI-powered crop recommendation system using soil, weather, and historical data to optimize agricultural yield.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/omroy07/LearnSphere_2">
+          <img src="https://www.skillstork.org/blog/wp-content/uploads/2022/11/modern-education-Skillstork.jpg" alt="LearnSphere" class="project-img">
+        </a>
+        <h5>LearnSphere</h5>
+        <p>Built a collaborative digital platform with AI-based peer matching and gamification to enhance student engagement and knowledge sharing.</p>
+      </div>
+
+      <!-- Duplicate cards -->
+      <div class="project-card">
+        <a href="https://github.com/Plantpredictioncode/Plantprediction-mlmodel">
+          <img src="https://user-images.githubusercontent.com/69152112/223475593-f9f036c5-06fb-4ba2-95b1-950c8e289b7b.png" alt="CropPrediction" class="project-img">
+        </a>
+        <h5>Crop Prediction Model</h5>
+        <p>Developed an AI-powered crop recommendation system using soil, weather, and historical data to optimize agricultural yield.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/omroy07/LearnSphere_2">
+          <img src="https://www.skillstork.org/blog/wp-content/uploads/2022/11/modern-education-Skillstork.jpg" alt="LearnSphere" class="project-img">
+        </a>
+        <h5>LearnSphere</h5>
+        <p>Built a collaborative digital platform with AI-based peer matching and gamification to enhance student engagement and knowledge sharing.</p>
+      </div>
+
+      <!--third duplicate-->
+      <div class="project-card">
+        <a href="https://github.com/Plantpredictioncode/Plantprediction-mlmodel">
+          <img src="https://user-images.githubusercontent.com/69152112/223475593-f9f036c5-06fb-4ba2-95b1-950c8e289b7b.png" alt="CropPrediction" class="project-img">
+        </a>
+        <h5>Crop Prediction Model</h5>
+        <p>Developed an AI-powered crop recommendation system using soil, weather, and historical data to optimize agricultural yield.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/omroy07/LearnSphere_2">
+          <img src="https://www.skillstork.org/blog/wp-content/uploads/2022/11/modern-education-Skillstork.jpg" alt="LearnSphere" class="project-img">
+        </a>
+        <h5>LearnSphere</h5>
+        <p>Built a collaborative digital platform with AI-based peer matching and gamification to enhance student engagement and knowledge sharing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="container py-5" data-aos="fade-up" style="margin-bottom: 50px;">
+  <h2 class="text-center mb-4">Achievements</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Neural Nexus Hackathon Finalist</h5>
+          <p class="card-text">Selected as a finalist among numerous participants for developing an innovative AI/ML-based solution during the Neural Nexus Hackathon, showcasing strong problem-solving and teamwork under pressure.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Vultr Hackathon Finalist</h5>
+          <p class="card-text">Achieved finalist position by contributing to a high-impact tech project that demonstrated creativity, technical proficiency, and practical application of cloud-based solutions at the Vultr Hackathon.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more achievements below similarly -->
+
+  </div>
+</section>
+
+
+<section id="certificates" class="container py-5" data-aos="fade-up" style="margin-bottom: 50px;">
+  <h2 class="text-center mb-4">Certificates</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Web Development</h5>
+          <p class="card-text">Issued by Udemy | Jan 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Responsive Web Design</h5>
+          <p class="card-text">Issued by FreeCodeCamp | May 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Scientific Computing with Python</h5>
+          <p class="card-text">Issued by FreeCodeCamp | April 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more certificates here -->
+  </div>
+</section>
+
+<section id="contact" class="contact-section text-white">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-3"><strong>Contact Me</strong></h2>
+        <p>Fill out the form to get in touch.</p>
+      </div>
+      <div class="col-md-6">
+        <form class="bg-light p-4 rounded shadow">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter Your First and Last Name Here">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address Here" required>
+          </div>
+          <div class="mb-3">
+            <label for="interest" class="form-label">Type your message here...</label>
+            <textarea class="form-control" id="interest" rows="4" placeholder="Message." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-info text-white">Submit Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- 💡 Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true      // animate only once
+  });
+</script>
+
+</body>
+</html>
