@@ -66,7 +66,7 @@
       background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for readability */
     }
 
-    .about, .calligraphy {
+    .about {
       width: 48%;
     }
 
@@ -261,16 +261,16 @@ html {
   color: white;
 }
 .about-image {
-  flex: 1;
-  min-width: 280px;
-  max-width: 500px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  aspect-ratio: 1 / 1; /* makes it square */
 }
 
 .about-image img {
   width: 100%;
-  height: 50%;
-  border-radius: 10px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 1rem; /* optional, for rounded edges */
 }
 
 /* Responsive adjustments */
@@ -317,6 +317,54 @@ main {
   transition: transform 0.3s ease;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about-box {
+  background-color: #111; /* your black box */
+  padding: 2rem;
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.image-box {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem; /* optional for style */
+  aspect-ratio: auto;  /* allow matching height of box */
+  display: block;
+}
+
+
+.responsive-square {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure image fills the square without distortion */
+  display: block;
+}
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 80vw;
+  }
+}
+
 
   </style>
 </head>
@@ -338,7 +386,7 @@ main {
       <li><a href="#about" class="nav-link px-2">About Me</a></li>
       <li><a href="#skills" class="nav-link px-2">Skills</a></li>
       <li><a href="#projects" class="nav-link px-2">Projects</a></li>
-      <li><a href="#experience" class="nav-link px-2 link-secondary">Experience</a></li>
+      <li><a href="#experience" class="nav-link px-2">Experience</a></li>
       <li><a href="#achievements" class="nav-link px-2">Achievements</a></li>
       <li><a href="#certificates" class="nav-link px-2">Certificates</a></li>
       <li><a href="#contact" class="nav-link px-2">Contact</a></li>
@@ -353,7 +401,7 @@ main {
   <section id="hero-section" class="about-me">
     <div class="container hero-content">
       <!-- About on Left -->
-      <div id="about"class="about text-left about-text">
+      <div id="about"class="about text-left about-text about-section">
         <h2 >About Me</h2>
         <p class="lead" >
           Hello! I'm Kanisha Sharma, a passionate developer and lifelong learner with a strong interest in Artificial Intelligence and Machine Learning. I enjoy exploring new technologies, solving real-world problems through code, and continuously improving my skills.
@@ -379,10 +427,11 @@ main {
 </div>
 
       </div>
+      <div class="image-box">
+  <img src="Kanisha.png" alt="Kanisha" class="responsive-square" />
+</div>
+
       
-      <!-- Calligraphy on Right -->
-      <div class="calligraphy text-right" id="hero-calligraphy" data-aos="fade-up">
-      </div>
     </div>
   </section>
 
