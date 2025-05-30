@@ -318,6 +318,11 @@ main {
 .social-icons a:hover img {
   transform: scale(1.2);
 }
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
   </style>
 </head>
@@ -336,10 +341,10 @@ main {
       </a>
     </div>
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#about" class="nav-link px-2 link-secondary">Home</a></li>
       <li><a href="#about" class="nav-link px-2">About Me</a></li>
       <li><a href="#skills" class="nav-link px-2">Skills</a></li>
       <li><a href="#projects" class="nav-link px-2">Projects</a></li>
+      <li><a href="#experience" class="nav-link px-2 link-secondary">Experience</a></li>
       <li><a href="#achievements" class="nav-link px-2">Achievements</a></li>
       <li><a href="#certificates" class="nav-link px-2">Certificates</a></li>
       <li><a href="#contact" class="nav-link px-2">Contact</a></li>
@@ -366,18 +371,18 @@ main {
         </section>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/kanisha-sharma11/" target="_blank" aria-label="LinkedIn">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-          </a>
-          <a href="https://leetcode.com/u/Kanisha_Sharma/" target="_blank" aria-label="LeetCode">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg" alt="LeetCode">
-          </a>
-          <a href="https://github.com/KanishaSharma11" target="_blank" aria-label="GitHub">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
-          </a>
-          <a href="https://www.geeksforgeeks.org/user/kanisha_sharma/" target="_blank" aria-label="GeeksforGeeks">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksforGeeks">
-          </a>
-        </div>
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+  </a>
+  <a href="https://leetcode.com/u/Kanisha_Sharma/" target="_blank" aria-label="LeetCode">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg" alt="LeetCode">
+  </a>
+  <a href="https://github.com/KanishaSharma11" target="_blank" aria-label="GitHub">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+  </a>
+  <a href="https://www.geeksforgeeks.org/user/kanisha_sharma/" target="_blank" aria-label="GeeksforGeeks">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksforGeeks">
+  </a>
+</div>
 
       </div>
       
@@ -388,53 +393,99 @@ main {
   </section>
 
 
-<!-- 🚀 Skills Section -->
-<section id="skills" class="container py-5"  style="margin-bottom: 50px;">
-  <h2 class="text-center mb-4" >Skills</h2>
-  <div style="margin-bottom: 50px;" data-aos="fade-up">
-    <div class="row">
-    <div class="col-md-6">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-transparent">
-          <p>Proficient in Python, C++, and Java; experienced in web development using HTML, CSS, and JavaScript; working knowledge of R</p>
-        </li>
-        <li class="list-group-item bg-transparent">
-          <p>Hands-on experience with NumPy, Pandas, Matplotlib, Seaborn, and Scikit-Learn for data analysis and machine learning</p>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-transparent">
-          <p>Proficient in developing deep learning models using TensorFlow and Keras</p>
-        </li>
-        <li class="list-group-item bg-transparent">
-          <p>Skilled in working with relational databases including MySQL and Oracle SQL</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  </div>
-  
 
-  <h4 class="text-center mb-4"  >Domains/ Expertise</h4>
-  <div class="row" data-aos="fade-up">
-    <div class="col-md-6">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-transparent">
-          <strong>Machine Learning</strong>
-        </li>
-      </ul>
+<!-- 🚀 Skills Section -->
+<section id="skills" class="container py-5" style="margin-bottom: 50px;">
+  <h2 class="text-center mb-4">Skills</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4" data-aos="fade-up">
+    
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Programming Languages</h5>
+          <div style="display: flex; gap: 2rem;">
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li>Python</li>
+    <li>C++</li>
+  </ul>
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li>Java</li>
+    <li>R</li>
+  </ul>
+</div>
+
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-transparent">
-          <strong>Web Development</strong>
-        </li>
-      </ul>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Machine Learning & Deep Learning</h5>
+          <div style="display: flex; gap: 2rem;">
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>NumPy</li>
+            <li>Pandas</li>
+            <li>Matplotlib</li>
+          </ul>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Seaborn</li>
+            <li>Scikit-Learn</li>
+          </ul>
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Frameworks</h5>
+          <li>Tensorflow</li>
+          <li>Keras</li>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Web Development</h5>
+          <div style="display: flex; gap: 2rem;">
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Javascript</li>
+          </ul>
+    </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Databases</h5>
+          <div style="display: flex; gap: 2rem;">
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li>MySQL</li>
+  </ul>
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li>Oracle SQL</li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <!-- 🚀 Projects Section -->
 <section id="projects" class="container-fluid py-5" style="margin-bottom: 50px;">
@@ -493,6 +544,31 @@ main {
   </div>
 </section>
 
+<!--Experience-->
+<section id="experience" class="container py-5" data-aos="fade-up" style="margin-bottom: 50px;">
+  <h2 class="text-center mb-4">Experience</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Strategic Team Lead</h5>
+          <p class="text-secondary fw-semibold mb-2">
+            INNOVATEX 2025 <span >| March 2025 – April 2025</span>
+          </p>
+          <p class="card-text">
+            Led the strategic planning team during a national-level tech fest. Coordinated AI/ML workshops, supervised development tracks, and ensured cross-functional collaboration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 <section id="achievements" class="container py-5" data-aos="fade-up" style="margin-bottom: 50px;">
   <h2 class="text-center mb-4">Achievements</h2>
   <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -524,7 +600,14 @@ main {
 <section id="certificates" class="container py-5" data-aos="fade-up" style="margin-bottom: 50px;">
   <h2 class="text-center mb-4">Certificates</h2>
   <div class="row row-cols-1 row-cols-md-2 g-4">
-    
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Cloud Computing</h5>
+          <p class="card-text">Issued by NPTEL | May 2025</p>
+        </div>
+      </div>
+    </div>
     <div class="col">
       <div class="card h-100 shadow-sm">
         <div class="card-body">
