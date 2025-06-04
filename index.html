@@ -351,7 +351,7 @@ main {
   object-fit: cover; /* Makes sure image fills the square without distortion */
   display: block;
 }
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .about-section {
     flex-direction: column;
     text-align: center;
@@ -359,11 +359,6 @@ main {
 
   .about-image {
     max-width: 80vw;
-  }
-
-  .project-card {
-    flex: 1 1 30% !important;
-    max-width: 48%;
   }
 }
 
@@ -394,6 +389,19 @@ main {
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
+}
+@media (max-width: 576px) {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .project-card {
+    flex: 1 1 30%;
+    max-width: 45%;
+  }
 }
 
 
