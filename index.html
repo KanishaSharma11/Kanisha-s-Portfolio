@@ -413,26 +413,32 @@ main {
  </main>
 <div class="container-fluid bg-white fixed-top shadow-sm">
   <header class="container d-flex flex-wrap align-items-center justify-content-between py-3 border-bottom">
+    <!-- Left: Name & Logo -->
     <div class="d-flex align-items-center gap-3">
       <strong>Kanisha Sharma</strong>
       <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-        <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
       </a>
     </div>
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#about" class="nav-link px-2">About Me</a></li>
-      <li><a href="#skills" class="nav-link px-2">Skills</a></li>
-      <li><a href="#projects" class="nav-link px-2">Projects</a></li>
-      <li><a href="#experience" class="nav-link px-2">Experience</a></li>
-      <li><a href="#achievements" class="nav-link px-2">Achievements</a></li>
-      <li><a href="#certificates" class="nav-link px-2">Certificates</a></li>
-      <li><a href="#contact" class="nav-link px-2">Contact</a></li>
-    </ul>
-    <div>
+
+    <!-- Right: Nav links + dark mode button -->
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <ul class="nav mb-0">
+        <li><a href="#about" class="nav-link px-2">About Me</a></li>
+        <li><a href="#skills" class="nav-link px-2">Skills</a></li>
+        <li><a href="#projects" class="nav-link px-2">Projects</a></li>
+        <li><a href="#experience" class="nav-link px-2">Experience</a></li>
+        <li><a href="#achievements" class="nav-link px-2">Achievements</a></li>
+        <li><a href="#certificates" class="nav-link px-2">Certificates</a></li>
+        <li><a href="#contact" class="nav-link px-2">Contact</a></li>
+      </ul>
       <button class="btn btn-dark" onclick="toggleDarkMode()">🌙</button>
     </div>
   </header>
 </div>
+
 
 <main>
   <section id="hero-section" class="about-me" >
@@ -587,7 +593,7 @@ main {
           <img src="cropYieldPrediction.png" alt="LearnSphere" class="project-img">
         </a>
         <h5>Crop Yield Prediction</h5>
-        <p>Built a collaborative digital platform with AI-based peer matching and gamification to enhance student engagement and knowledge sharing.</p>
+        <p>Developed a machine learning model to predict crop yield using historical agricultural and environmental data, enabling smarter farming and policy planning.</p>
       </div>
     </div>
   </div>
