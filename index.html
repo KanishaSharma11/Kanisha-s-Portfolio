@@ -759,6 +759,35 @@ textarea {
   }
 }
 
+/* Default light mode fix for toggler icon */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* Dark navbar but switch icon color manually */
+.navbar-toggler {
+  border-color: transparent;
+}
+
+body.light-mode .navbar-dark .navbar-toggler-icon {
+  filter: invert(1); /* Makes it dark on light background */
+}
+/* Default icon styles */
+.leetcode-icon,
+.gfg-icon {
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Light Mode: Darken icons so they are visible */
+body.light-mode .leetcode-icon,
+body.light-mode .gfg-icon {
+  filter: brightness(0.1); /* Almost black */
+}
+
+/* Dark Mode: Brighten icons so they are visible */
+body.dark-mode .leetcode-icon,
+body.dark-mode .gfg-icon {
+  filter: brightness(100); /* White-looking on dark */
+}
 
   </style>
 </head>
@@ -824,11 +853,15 @@ textarea {
                 <i class="fab fa-github"></i>
               </a>
               <a href="https://leetcode.com/u/Kanisha_Sharma/" target="_blank" class="social-icon">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="height: 24px;">
-              </a>
-              <a href="https://www.geeksforgeeks.org/user/kanisha_sharma/" target="_blank" class="social-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksforGeeks" style="height: 24px;">
-              </a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
+       alt="LeetCode" class="leetcode-icon" style="height: 24px;">
+</a>
+
+<a href="https://www.geeksforgeeks.org/user/kanisha_sharma/" target="_blank" class="social-icon">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" 
+       alt="GeeksforGeeks" class="gfg-icon" style="height: 24px;">
+</a>
+
             </div>
           </div>
         </div>
