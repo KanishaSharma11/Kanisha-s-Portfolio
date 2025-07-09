@@ -39,6 +39,7 @@
       background: var(--dark-bg);
       color: var(--text-light);
       overflow-x: hidden;
+      padding-top: 80px; 
     }
 
     /* Animated Background */
@@ -731,6 +732,33 @@ textarea {
   object-fit: contain;
   filter: brightness(0) invert(1); /* Make it white-ish in dark mode */
 }
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70vw;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem;
+    max-width: 60vw;
+  }
+}
+
 
   </style>
 </head>
@@ -747,13 +775,13 @@ textarea {
   <div class="particles" id="particles"></div>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#hero">Kanisha Sharma</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Kanisha Sharma</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
       
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto me-4">
