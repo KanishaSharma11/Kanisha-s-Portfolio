@@ -310,5 +310,13 @@ function toggleTheme() {
   });
 })();
 
+document.getElementById("ctaBtn").addEventListener("click", function(e){
+  const link = document.createElement("a");
+  link.href = "Kanisha_Sharma_VITBhopal.pdf";
+  link.download = "Kanisha_Sharma_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
 
 /* End of script.js */
