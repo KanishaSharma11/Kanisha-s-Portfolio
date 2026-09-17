@@ -408,7 +408,7 @@
 
     <p class="hero__role rise" style="--i:2">I build <span class="typewriter" id="typewriter">AI/ML solutions</span><span class="cursor">&nbsp;</span></p>
 
-    <p class="hero__bio rise" style="--i:3">AI &amp; ML undergraduate at VIT Bhopal with a habit of shipping real, working things — supervised and unsupervised models, ETL pipelines on GCP, and production-grade code that other engineers can actually rely on.</p>
+    <p class="hero__bio rise" style="--i:3">AI &amp; ML undergraduate at VIT Bhopal with a habit of shipping real working things, supervised and unsupervised models, ETL pipelines on GCP, and production-grade code that other engineers can actually rely on.</p>
 
     <div class="hero__actions rise" style="--i:4">
       <a class="btn btn-brass" href="./Kanisha Sharma 2.pdf" download>Download résumé</a>
@@ -765,7 +765,7 @@
           <textarea id="message" name="message" rows="5" placeholder="What would you like to talk about?" required></textarea>
         </div>
         <button type="submit" class="btn btn-brass" id="submitBtn" style="width:100%">Send message</button>
-        <p class="success-msg" id="successMsg">Thanks — your message has been noted. I'll get back to you soon.</p>
+        <p class="success-msg" id="successMsg">Thanks, your message has been noted. I'll get back to you soon.</p>
       </form>
     </div>
   </div>
@@ -1026,7 +1026,7 @@
       }
 
       if(!isGenuineEmail(emailInput.value.trim())){
-        emailInput.setCustomValidity('Please use a real personal or company email address — temporary/disposable addresses aren\'t accepted.');
+        emailInput.setCustomValidity('Please use a real personal or company email address; temporary/disposable addresses aren\'t accepted.');
         emailInput.reportValidity();
         return;
       }
@@ -1050,7 +1050,7 @@
           }
         })
         .catch(function(){
-          alert('Network error — please check your connection and try again.');
+          alert('Network error; please check your connection and try again.');
         })
         .then(function(){
           submitBtn.disabled = false;
